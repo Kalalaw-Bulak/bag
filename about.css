@@ -1,0 +1,373 @@
+/* suwati */
+@font-face {
+    font-family: lato-black;
+    src: url(./sulati/Lato-Black.ttf);
+}
+@font-face {
+    font-family: lato-italic;
+    src: url(./sulati/Lato-Italic.ttf);
+}
+@font-face {
+    font-family: nipis;
+    src: url(./sulati/nipis.ttf);
+}
+@font-face {
+    font-family: oswald;
+    src: url(./sulati/oswald.ttf);
+}@font-face {
+    font-family: playfair-atay;
+    src: url(./sulati/playfair-atay.ttf);
+}
+@font-face {
+    font-family: playfair-tarong;
+    src: url(./sulati/playfair-tarong.ttf);
+}
+@font-face {
+    font-family: playwrite-atay;
+    src: url(./sulati/playwrite-atay.ttf);
+}
+@font-face {
+    font-family: tarong;
+    src: url(./sulati/playwrite-tarong.ttf);
+}
+@font-face {
+    font-family: lilita;
+    src: url(./sulati/LilitaOne.ttf);
+}
+
+/* i-sayaw mo, boi! */
+@keyframes slider-l {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes slider-r {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes rising {
+    from {
+        margin-top: -100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+@keyframes sinking {
+    from {
+        margin-bottom: -100%;
+    }
+    to {
+        margin-bottom: 0%;
+    }
+}
+@keyframes fade {
+    100% {opacity: 1;}
+    0% {opacity: 0;}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: linear-gradient(195deg, yellow ,blue, skyblue, white, white, white, white);
+    border-radius: 0px 0px 25px 0px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;    
+
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid skyblue;
+}
+#back {
+    text-decoration: none;
+    color: white;
+}
+
+.taas a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 250px;
+
+    font-family: playfair-atay, sans-serif;
+}
+.taas a::after {
+    /* text-decoration: underline red; */
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.taas a:hover {
+    color: black;
+}
+.taas a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.side-nav {
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(45deg, yellow,blue, skyblue, white, white, white, white);
+    
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    
+    animation-name: slider-l;
+    animation-duration: 2s;
+
+    font-family: playfair-atay, sans-serif; 
+}
+.side-nav a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.side-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+    
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.side-nav a:hover {
+    color: black;
+}
+.side-nav a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.missionandvision {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.goalsandvision {
+    position: absolute;
+    top: 350px;
+    left: 0px;
+    
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.course {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+body {
+    background-color:rgb(47, 106, 184);
+}
+
+.title {
+    color: skyblue;
+    position: absolute;
+    left: 725px;
+    top: 25%;
+    
+    font-size: 50px;
+    font-family: lilita;
+    
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+.box-one {
+    /* background: linear-gradient(145deg, yellow ,blue, skyblue, white, white, white, white); */
+    background: linear-gradient(145deg,skyblue, skyblue, white, white, yellow);
+    border-radius: 20px;
+    width: 800px;
+    height: 440px;
+    padding: 20px;
+    
+    position: absolute;
+    left: 250px;
+    top: 320px;
+
+    animation-name: slider-l;
+    animation-duration: 2s;
+
+    font-family: nipis;
+}
+.ucdako {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    float: left;
+}
+.aboutone {
+    margin-top: 50px;
+    font-size: 22px;
+}
+.abouttwo {
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.box-two {
+    width: 760px;
+    height: 350px;
+    /* background: linear-gradient(145deg, yellow ,blue, skyblue, white, white, white, white); */
+    background: linear-gradient(145deg, skyblue, skyblue, white, white, yellow);
+    border-radius: 20px;
+    padding: 20px;
+    
+    position: absolute;
+    left: 1095px;
+    top: 320px;
+
+    animation-name: slider-r;
+    animation-duration: 2s;
+
+    font-family: nipis;
+}
+.commits {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.commits-list {
+    padding: 15px;
+    font-size: 20px;
+}
+
+.box-three {
+    width: 700px;
+    height: 600px;
+    /* background: linear-gradient(to left, yellow ,blue, skyblue, white, white, white, white); */
+    background: linear-gradient(145deg, skyblue, skyblue, white, white, yellow);
+    border-radius: 20px;
+    padding: 20px;
+
+    position: absolute;
+    left: 1155px;
+    top: 685px;
+
+    animation-name: slider-r;
+    animation-duration: 2s;
+
+    font-family: nipis;
+}
+.graduate {
+    font-size: 22px;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.box-four {
+    width: 850px;
+    height: 550px;
+    /* background: linear-gradient(to right, yellow ,blue, skyblue, white, white, white, white); */
+    background: linear-gradient(145deg, skyblue, skyblue, white, white, yellow);
+    border-radius: 20px;
+    padding: 20px;
+
+    position: absolute;
+    left: 250px;
+    top: 775px;
+
+    animation-name: slider-l;
+    animation-duration: 2s;
+
+    font-family: nipis;
+}
+.goals {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.box-five {
+    width: 1150px;
+    height: 600px;
+    /* background: linear-gradient(0deg, yellow ,blue, skyblue, white, white, white, white); */
+    background: linear-gradient(145deg, skyblue, skyblue, white, white,yellow);
+    border-radius: 20px;
+    padding: 20px;
+
+    position: absolute;
+    left: 440px;
+    top: 1350px;
+
+    animation-name: rising;
+    animation-duration: 2s;
+
+    font-family: nipis;
+}
+.core-dako {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+.core-gamay {
+    font-size: 20px;
+    text-align: center;
+}
+
+

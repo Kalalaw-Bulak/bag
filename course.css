@@ -1,0 +1,594 @@
+/* suwati */
+@font-face {
+    font-family: lato-black;
+    src: url(./sulati/Lato-Black.ttf);
+}
+@font-face {
+    font-family: lato-italic;
+    src: url(./sulati/Lato-Italic.ttf);
+}
+@font-face {
+    font-family: nipis;
+    src: url(./sulati/nipis.ttf);
+}
+@font-face {
+    font-family: oswald;
+    src: url(./sulati/oswald.ttf);
+}@font-face {
+    font-family: playfair-atay;
+    src: url(./sulati/playfair-atay.ttf);
+}
+@font-face {
+    font-family: playfair-tarong;
+    src: url(./sulati/playfair-tarong.ttf);
+}
+@font-face {
+    font-family: playwrite-atay;
+    src: url(./sulati/playwrite-atay.ttf);
+}
+@font-face {
+    font-family: tarong;
+    src: url(./sulati/playwrite-tarong.ttf);
+}
+@font-face {
+    font-family: lilita;
+    src: url(./sulati/LilitaOne.ttf);
+}
+
+/* i-sayaw mo, boi! */
+@keyframes slider-l {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes slider-r {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes rising {
+    from {
+        margin-top: -100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+@keyframes sinking {
+    from {
+        margin-bottom: -100%;
+    }
+    to {
+        margin-bottom: 0%;
+    }
+}
+@keyframes fade {
+    100% {
+        opacity: 1;
+    }
+    0% {
+        opacity: 0;
+    }
+}
+@keyframes fade-2 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    border-radius: 0px 0px 25px 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid skyblue;
+}
+
+.taas a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 250px;
+
+    font-family: playfair-atay, sans-serif;
+
+}
+.taas a::after {
+    /* text-decoration: underline red; */
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.taas a:hover {
+    color: black;
+}
+.taas a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.side-nav {
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(45deg, yellow,blue, skyblue, white, white, white, white);
+
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    animation-name: slider-l;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+    font-family: playfair-atay, sans-serif;
+}
+.side-nav a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.side-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.side-nav a:hover {
+    color: black;
+}
+.side-nav a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.missionandvision {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.goalsandvision {
+    position: absolute;
+    top: 350px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.course {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+body {
+    background-color: rgb(47, 106, 184);
+}
+
+.title {
+    color: yellow;
+    position: absolute;
+    left: 900px;
+    top: 25%;
+
+    font-size: 50px;
+    font-family: lilita;
+
+    animation-name: slider-l;
+    animation-duration: 2s;
+}
+.ubos-title {
+    color: white;
+    position: absolute;
+    left: 990px;
+    top: 33%;
+
+    font-size: 25px;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+    
+    font-family: nipis;
+}
+
+.letter-a {
+    color: yellow;
+
+    position: absolute;
+    left: 250px;
+    top: 430px;
+
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.cae {
+    color: wheat    ;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 200px;
+    
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 250px;
+    top: 480px;
+
+    background-image: url(./larawankupas/coe.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+
+    transform: scale(1);
+}
+.cae p {
+    font-size: 18px;
+}
+.cae:hover , .cae p:hover{
+    color: darkblue;
+    transform: scale(1.15);
+    transition: 1s;
+}
+.cas {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 200px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 1350px;
+    top: 480px;
+
+    background-image: url(./larawankupas/cas.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.cas p {
+    font-size: 20px;
+}
+.cas:hover , .cas p:hover{
+    color: darkblue;
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+.letter-b {
+    color: yellow;
+
+    position: absolute;
+    left: 250px;
+    top: 840px;
+
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.cba {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 230px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 800px;
+    top: 890px;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.cba p {
+    font-size: 18px;
+}
+.cba:hover , .cba p:hover{
+    color: darkblue;
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+.letter-c {
+    color: yellow;
+
+    position: absolute;
+    left: 250px;
+    top: 1250px;
+
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.ccs {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 200px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 250px;
+    top: 1300px;
+
+    background-image: url(./larawankupas/ccs.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.ccs p {
+    font-size: 18px;
+}
+.ccs:hover , .css p:hover {
+    color: darkblue;
+    transform: scale(1.15);
+    transition: 1s;
+}
+.ccj {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px white;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 200px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 800px;
+    top: 1300px;
+
+    background-image: url(./larawankupas/ccj.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.ccj p {
+    margin-top: 25px;
+    font-size: 25px;
+    text-shadow: 2px 2px 3px white
+    , 2px 2px 3px white;
+}
+.ccj:hover , .ccj p:hover{
+    color: blue;
+    transform: scale(1.15);
+    transition: 1s;
+}
+.cca {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 200px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 1340px;
+    top: 1300px;
+
+    background-image: url(./larawankupas/cca.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.cca p {
+    margin-top: 25px;
+    font-size: 25px;
+}
+.cca:hover , .cca p:hover {
+    color: white;
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+.letter-h {
+    color: yellow;
+
+    position: absolute;
+    left: 250px;
+    top: 1660px;
+
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.chm {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 200px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 800px;
+    top: 1710px;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.chm p {
+    margin-top: 25px;
+    font-size: 25px;
+}
+.chm:hover , .chm p:hover{
+    color: darkblue;
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+
+.letter-s {
+    color: yellow;
+
+    position: absolute;
+    left: 250px;
+    top: 2070px;
+
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.csw {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 450px;
+    height: 200px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 800px;
+    top: 2120px;
+
+    background-image: url(./larawankupas/csw.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.csw p {
+    margin-top: 25px;
+    font-size: 25px;
+}
+.csw:hover , .csw p:hover {
+    color: darkblue;
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+.letter-t {
+    color: yellow;
+
+    position: absolute;
+    left: 250px;
+    top: 2480px;
+
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.cte {
+    color: wheat;
+    text-shadow: 2px 2px 3px black
+    ,0px 4px 4px black;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 520px;
+    height: 250px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    position: absolute;
+    left: 760px;
+    top: 2530px;
+
+    background-image: url(./larawankupas/cte.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    animation-name: fade-2;
+    animation-duration: 2s;
+}
+.cte p {
+    font-size: 18px;
+}
+.cte:hover , .cte p:hover{
+    color: darkblue;
+    transform: scale(1.15);
+    transition: 1s;
+}

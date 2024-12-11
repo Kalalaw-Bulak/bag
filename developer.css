@@ -1,0 +1,324 @@
+/* suwati */
+@font-face {
+    font-family: lato-black;
+    src: url(./sulati/Lato-Black.ttf);
+}
+@font-face {
+    font-family: lato-italic;
+    src: url(./sulati/Lato-Italic.ttf);
+}
+@font-face {
+    font-family: nipis;
+    src: url(./sulati/nipis.ttf);
+}
+@font-face {
+    font-family: oswald;
+    src: url(./sulati/oswald.ttf);
+}@font-face {
+    font-family: playfair-atay;
+    src: url(./sulati/playfair-atay.ttf);
+}
+@font-face {
+    font-family: playfair-tarong;
+    src: url(./sulati/playfair-tarong.ttf);
+}
+@font-face {
+    font-family: playwrite-atay;
+    src: url(./sulati/playwrite-atay.ttf);
+}
+@font-face {
+    font-family: tarong;
+    src: url(./sulati/playwrite-tarong.ttf);
+}
+@font-face {
+    font-family: lilita;
+    src: url(./sulati/LilitaOne.ttf);
+}
+
+/* i-sayaw mo, boi! */
+@keyframes slider-l {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes slider-r {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes rising {
+    from {
+        margin-top: -100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+@keyframes sinking {
+    from {
+        margin-bottom: -100%;
+    }
+    to {
+        margin-bottom: 0%;
+    }
+}
+@keyframes fade {
+    100% {
+        opacity: 1;
+    }
+    0% {
+        opacity: 0;
+    }
+}
+@keyframes fade-2 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    border-radius: 0px 0px 25px 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid skyblue;
+}
+
+.taas a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 250px;
+
+    font-family: playfair-atay, sans-serif;
+
+}
+.taas a::after {
+    /* text-decoration: underline red; */
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.taas a:hover {
+    color: black;
+}
+.taas a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.side-nav {
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(45deg, yellow,blue, skyblue, white, white, white, white);
+
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    animation-name: slider-l;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+    font-family: playfair-atay, sans-serif;
+}
+.side-nav a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.side-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.side-nav a:hover {
+    color: black;
+}
+.side-nav a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.missionandvision {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.goalsandvision {
+    position: absolute;
+    top: 350px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.course {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+body {
+    background-color: rgb(47, 106, 184);
+}
+
+.title {
+    color: yellow;
+    position: absolute;
+    left: 900px;
+    top: 25%;
+
+    font-size: 50px;
+    font-family: lilita;
+
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.title::after {
+    color: white;
+    content: 'From University of Cebu';
+    font-size: 20px;
+
+    position: absolute;
+    left: -100px;
+    top: 50px;
+}
+
+.obiedo {
+    background: linear-gradient(230deg, darkblue, blue, skyblue, white, yellow, pink);
+    width: 500px;
+    height: 750px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px;
+
+    position: absolute;
+    left: 790px;
+    top: 450px;
+
+    box-shadow: 0px 10px 10px black
+    , 0px 10px 10px white;
+}
+.obiedo img {
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 6px dotted wheat;
+
+    margin-left: 0px;
+}
+.obiedo .name-obiedo {
+    color: red;
+    text-align: center;
+    margin-top: 50px;
+}
+.skill-obiedo {
+    font-size: 22px;
+}
+.obiedo h2 {
+    color: darkblue;
+    margin-top: 50px;
+}
+.about-obiedo {
+    font-size: 20px;
+}
+.contact-obiedo {
+    margin-top: 50px;
+    font-size: 20px;
+}
+.contact-obiedo a {
+    color: skyblue;
+    text-decoration: none;
+}
+.contact-obiedo a:hover {
+    background: linear-gradient(to right, blue, red, yellow);
+}
+
+.bacla-an {
+    background-color: white;
+    width: 500px;
+    height: 750px;
+
+    position: absolute;
+    left: 1200px;
+    top: 1350px;
+}
+
+.ompad {
+    background-color: white;
+    width: 500px;
+    height: 750px;
+
+    position: absolute;
+    left: 420px;
+    top: 2250px;
+}

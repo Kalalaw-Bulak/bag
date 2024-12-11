@@ -1,0 +1,747 @@
+/* suwati */
+@font-face {
+    font-family: lato-black;
+    src: url(./sulati/Lato-Black.ttf);
+}
+@font-face {
+    font-family: lato-italic;
+    src: url(./sulati/Lato-Italic.ttf);
+}
+@font-face {
+    font-family: nipis;
+    src: url(./sulati/nipis.ttf);
+}
+@font-face {
+    font-family: oswald;
+    src: url(./sulati/oswald.ttf);
+}@font-face {
+    font-family: playfair-atay;
+    src: url(./sulati/playfair-atay.ttf);
+}
+@font-face {
+    font-family: playfair-tarong;
+    src: url(./sulati/playfair-tarong.ttf);
+}
+@font-face {
+    font-family: playwrite-atay;
+    src: url(./sulati/playwrite-atay.ttf);
+}
+@font-face {
+    font-family: tarong;
+    src: url(./sulati/playwrite-tarong.ttf);
+}
+@font-face {
+    font-family: lilita;
+    src: url(./sulati/LilitaOne.ttf);
+}
+
+/* i-sayaw mo, boi! */
+@keyframes auto-slider {
+    0% {
+        transform: translate(0%);
+    }
+    5% {
+        transform: translate(0%);
+    }
+    10% {
+        transform: translate(0%);
+    }
+    16.67% {
+        transform: translate(-115%);
+        opacity: 0.9;
+    }
+    33.32% {
+        transform: translate(-215%);
+    }
+    49.98% {
+        transform: translate(-315%);
+    }
+    66.64% {
+        transform: translate(-425%);
+    }
+    83.3% {
+        transform: translate(-515%);
+    }
+    99.9% {
+        transform: translate(-525%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+
+}
+@keyframes slider-l {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes slider-r {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes rising {
+    from {
+        margin-top: -100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+@keyframes sinking {
+    from {
+        margin-bottom: -100%;
+    }
+    to {
+        margin-bottom: 0%;
+    }
+}
+@keyframes fade {
+    100% {opacity: 1;}
+    0% {opacity: 0;}
+}
+@keyframes expand {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    border-radius: 0px 0px 25px 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid skyblue;
+}
+
+.taas a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 250px;
+
+    font-family: playfair-atay, sans-serif;
+
+}
+.taas a::after {
+    /* text-decoration: underline red; */
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.taas a:hover {
+    color: black;
+}
+.taas a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.side-nav {
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(45deg, yellow,blue, skyblue, white, white, white, white);
+
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    animation-name: slider-l;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+    font-family: playfair-atay, sans-serif;
+}
+.side-nav a {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 2px 0px 0px black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.side-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.side-nav a:hover {
+    color: black;
+}
+.side-nav a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.missionandvision {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.goalsandvision {
+    position: absolute;
+    top: 350px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+.course {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+body {
+    background-color: rgb(47, 106, 184);
+    /* background-image: url(./larawankupas/uc-building-one.webp);
+    background-repeat: no-repeat;
+    background-size: 900px 1000px;
+    background-position: 550px 0px ;
+    position: fixed; */
+
+}
+
+.title {
+    color: darkblue;
+    text-align: center;
+
+    position: absolute;
+    left: 650px;
+    top: 230px;
+}
+
+.dako {
+    background-color: skyblue;
+    box-shadow: 4px 4px 4px 4px white;
+
+    width: 1700px;
+    height: 4000px;
+    border-radius: 75px;
+
+    position: absolute;
+    left: 170px;
+    top: 220px;
+
+    animation-name: expand;
+    animation-duration: 2s;
+}
+
+.welcome {
+    text-align: center;
+    padding-top: 22px;
+    background: linear-gradient(120deg, yellow,blue, skyblue, white, white, white, white);
+    border-radius: 0px 75px 0px 75px;
+    width: 150px;
+    height: 2.5%;
+
+    position: absolute;
+    left: 50px;
+    top: 25px;
+
+    font-family: lato-black, sans-serif;
+
+}
+.welcome:hover {
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+.uc-main {
+    color: darkblue;
+    background-color: white;
+    width: 1650px;
+    height: 210px;
+    border-radius: 160px 0px 75px 160px;
+
+    position: absolute;
+    left: 20px;
+    top: 80px;
+
+    font-family: sans-serif;
+}
+.uc-main img {
+    width: 250px;
+    height: 100%;
+    border-radius: 50%;
+}
+.title-one {
+    position: absolute;
+    left: 250px;
+    top: 10px;
+
+    font-size: 100px;
+}
+.title-one::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    border-radius: 5px;
+}
+.title-two {
+    color: yellow;
+    position: absolute;
+    left: 250px;
+    top: 140px;
+
+    font-size: 40px;
+}
+.title-three {
+    font-size: 20px;
+    text-align: center;
+
+    position: absolute;
+    left: 1250px;
+    top: 60px;
+
+    font-family: playfair-atay, sans-serif;
+}
+
+.litrato-dako {
+    width: 730px;
+    height: 550px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px 4px darkblue;
+
+    position: absolute;
+    left: 90px;
+    top: 350px;
+
+    overflow: hidden;
+
+    animation-name: expand;
+    animation-duration: 3s;
+}
+.litrato-dako:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+.litrato-gamay {
+    width: 100%;
+    display: flex;
+
+    animation-name: auto-slider;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 5s;
+
+}
+.ikaw-one {
+    width: 1350px;
+    height: 550px;
+
+}
+.ikaw-two {
+    width: 1350px;
+    height: 550px;
+}
+.ikaw-three {
+    width: 100%;
+    height: 550px;
+}
+.ikaw-four {
+    width: 1350px;
+    height: 550px;
+}
+.ikaw-five {
+    width: 1350px;
+    height: 550px;
+}
+.ikaw- {
+    width: 1350px;
+    height: 550px;
+}
+.ikaw-six {
+    width: 1350px;
+    height: 550px;
+}
+
+.kilid-litrato {
+    box-shadow: 4px 4px 4px 4px darkblue;
+    background: linear-gradient(45deg, yellow,blue, skyblue, white, white, white, white);
+    width: 700px;
+    height: 550px;
+    border-radius: 30px;
+    padding: 25px;
+
+    position: absolute;
+    left: 900px;
+    top: 350px;
+
+    font-family: nipis, sans-serif;
+}
+.kilid-litrato:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.news {
+    border-radius: 50px;
+    background-color: white;
+    width: 1500px;
+    height: 2300px;
+    padding: 25px;
+    box-shadow: 4px 4px 4px 4px yellow;
+
+    position: absolute;
+    left: 95px;
+    top: 1050px;
+
+    animation-name: expand;
+    animation-duration: 5s;
+
+    font-family: oswald, sans-serif;
+
+}
+.news::after {
+    position: absolute;
+    top: 60px;
+}
+
+.congrats {
+    padding: 2px;
+    border-top: 5px solid darkblue;
+    border-right: 5px solid yellow;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 1445px;
+    height: 465px;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 130px;
+
+    animation-name: fade;
+    animation-duration: 7s;
+
+}
+.congrats:hover {
+        transform: scale(0.9);
+        transition: 1s;
+}
+.congrats img {
+    padding: 5px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50px;
+
+}
+.paragraph-congrats {
+    width: 850px;
+    height: 100%;
+
+    position: absolute;
+    left: 550px;
+    top: 80px;
+}
+.paragraph-congrats p {
+    font-size: 22px;
+}
+.congrats a {
+    color: darkblue;
+    position: absolute;
+    left: 50px;
+    top: 360px;
+
+    text-decoration: none;
+}
+.congrats a:hover {
+    color: yellow;
+    background-color: darkblue;
+}
+.source-congrats {
+    color: darkblue;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.source-congrats::after {
+    content: 'Date: December 10, 2024';
+    font-size: 15px;
+
+    position: absolute;
+    top: 340px;
+
+    text-decoration: underline yellow;
+}
+
+.criminal {
+    padding: 2px;
+    border-top: 5px solid darkblue;
+    border-right: 5px solid yellow;    
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 1445px;
+    height: 465px;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 650px;
+
+    animation-name: fade;
+    animation-duration: 7s;
+}
+.criminal:hover {
+    transform: scale(0.9);
+    transition: 1s;
+}
+.criminal img {
+    padding: 5px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50px;
+}
+.paragraph-criminal {
+    width: 850px;
+    height: 100%;
+
+    position: absolute;
+    left: 550px;
+    top: 80px;
+}
+.paragraph-criminal p {
+    font-size: 30px;
+}
+.criminal a {
+    color: darkblue;
+    position: absolute;
+    left: 50px;
+    top: 340px;
+
+    text-decoration: none;
+}
+.criminal a:hover {
+    color: yellow;
+    background-color: darkblue;
+}
+.source-criminal {
+    color: darkblue;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.source-criminal::after {
+    content: 'Date: December 09, 2024';
+    font-size: 15px;
+
+    position: absolute;
+    left: 530px;
+    top: 310px;
+
+    text-decoration: underline yellow;
+}
+
+.scrabble {
+    padding: 2px;
+    border-top: 5px solid darkblue;
+    border-right: 5px solid yellow;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 1445px;
+    height: 465px;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 1170px;
+
+    animation-name: fade;
+    animation-duration: 7s;
+}
+.scrabble:hover {
+    transform: scale(0.9);
+    transition: 1s;
+}
+.scrabble img {
+    padding: 5px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50px;
+}
+.paragraph-scrabble {
+    width: 850px;
+    height: 100%;
+
+    position: absolute;
+    left: 550px;
+    top: 20px;
+}
+.paragraph-scrabble p {
+    font-size: 30px;
+}
+.link-scrabble {
+    color: darkblue;
+    position: absolute;
+    left: 610px;
+    top: 490px;
+
+    text-decoration: none;
+}
+.scrabble a:hover {
+    color: yellow;
+    background-color: darkblue;
+}
+.source-scrabble {
+    color: darkblue;
+
+    position: absolute;
+    left: 600px;
+    top: 440px;
+
+    font-size: 22px;
+}
+.source-scrabble::after {
+    content: 'December 09, 2024';
+    font-size: 15px;
+
+    position: absolute;
+    left: 450px;
+    top: 50px;
+
+    text-decoration: underline yellow;
+
+}
+
+.topnochers {
+    padding: 2px;
+    border-top: 5px solid darkblue;
+    border-right: 5px solid yellow;
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    width: 1445px;
+    height: 465px;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 1730px;
+
+    animation-name: fade;
+    animation-duration: 7s;
+
+}
+.topnochers:hover {
+    transform: scale(0.9);
+    transition: 1s;
+}
+.topnochers img {
+    padding: 5px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50px;
+}
+.paragraph-topnochers {
+    width: 850px;
+    height: 100%;
+
+    position: absolute;
+    left: 550px;
+    top: 200px;
+}
+.paragraph-topnochers p {
+    font-size: 22px;
+}
+.source-topnochers {
+    color: darkblue;
+    margin-top: 20px;
+    margin-left: 50px;
+
+    position: absolute;
+    left: 590px;
+    top: 360px;
+
+    font-size: 25px;
+}
+
+.contact {
+    background: linear-gradient(195deg, yellow,blue, skyblue, white, white, white, white);
+    box-shadow: -5px -5px 0px 0px darkblue;
+    width: 1000px;
+    height: 250px;
+    border-radius: 50px;
+    padding: 30px;
+
+    text-align: center;
+
+    position: absolute;
+    left: 350px;
+    top: 3500px;
+
+    animation-name: slider-l;
+    animation-duration: 10s;
+}
+.contact-one {
+    position: absolute;
+    left: 20px;
+    top: 90px;
+}
+.contact-two {
+    position: absolute;
+    left: 400px;
+    top: 90px;
+}
+.contact-three {
+    position: absolute;
+    left: 730px;
+    top: 90px;
+}
